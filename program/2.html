@@ -1,0 +1,131 @@
+<html>
+<head>   
+<link rel="stylesheet" href="../css/note.css">
+<link rel="shortcut icon" href="../images/icon.jpg" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">        
+<meta charset="utf-8"> 
+<meta name=”viewport” content=”width=device-width”, initial-scale=1”>
+<meta name="description" content="毎日１つ気になったニュースについて自分の見解を述べてます">         
+<script src="../js/jquery-3.4.1.min.js"></script>
+
+<title>忘備録 herokuへのでデプロイで躓いた点</title>
+</head>
+<style>
+.left h4{
+    margin-top: 20;
+    font-size: 20;
+}
+.contents p{
+    text-align: left;
+} 
+.theme{
+margin-top: 40;
+}
+.theme h4{
+  border-bottom: solid 2px #2aacd8;
+}
+.edit-time{
+text-align: left;
+padding-left: 10;
+}
+
+</style>
+<body>    
+    <div id="loading">
+     <img src="../images/loading.gif">
+    </div>
+
+    <header class="page-header" >
+      <h1><a href="../index.html">KAZUROG</a></h1>
+      <nav>
+      <ul class="main-nav" >
+      <li><a href="../index.html">ホーム</a></li>
+      <li><a href="../contact.html">お問い合わせ</a></li>
+      <li><a href="../writer.html">ライター</a></li>
+      </ul>
+      </nav>
+    </header>
+     <div class="container">
+      <main>
+       <div class="left">
+          <article>
+
+              <div class="left">
+                <div class="theme">
+                    <h4>herokuへのでデプロイで躓いた点</h4>
+                    </div>
+                    
+                    <div class="edit-time">
+                    <p>2021/2/26</p>
+                    </div>
+              <div class="contents">
+              <p>
+                  度々herokuにアプリをアップするが、毎回躓く部分が一緒な気がするので忘備録として残す。<br>
+                  今回躓いたのは大きく分けて２つ。<br><br>
+                  1つ目はdb周り<br>
+                  2つ目はSNS認証のリダイレクトが上手くいかなかった。<br><br>
+
+                  1つ目のdb周りだが、railsの場合デフォルトでsqliteが使用されている。だが、herokuはsqliteに対応しておらず、postgresqlを採用する必要がある。
+                  後からproductionのみpgに変更することも可能だが、rails new の段階でpostgresqlを指定した方が無難な気がする。。<br>
+                  ２つ目のSNS認証のリダイレクトが上手くいかなかった件だが、これは指定していたリダイレクトのURLがlocalhostのままであったことに起因していた。結構時間食った。。。<br>
+                  <br>
+                  herokuへのデプロイができたので次はawsへのデプロイに挑戦したい。
+                <br>
+
+
+             </p>
+              <p>
+                  <br>
+                  拙い文章でしたが最後までお読みいただきありがとうございました。
+              </p>
+            </div>
+           
+
+       
+       
+  </div>　　
+  </main>
+  <aside>
+   <div class="right">
+  
+
+      <h2 class="category"><a>カテゴリー</a></h2>
+      <ul class="genre">
+      <li><a href="../index.html" class="arrow sample1">書評</a></li>
+      <li><a href="../index.html" class="arrow sample1">プログラミング</a></li>
+      <li><a href="../index.html" class="arrow sample1">映画レビュー</a></li>
+      <li><a href="../index.html" class="arrow sample1">商品レビュー</a></li>  
+      </ul>  
+      
+    <div class="prof">
+      <img src="../images/nozi.png" width="200" height="200">
+      <div class="myname"><a>ぴーたい</a></div>
+      <div class="intro"><a>少しでも有益な情報を提供できたら幸いです</a></div>
+     </div>
+          
+  </div>　
+  </aside>　
+  </div>
+           
+    <footer>
+    <div class="whole-footer">
+        <h4 id="scroll-top"><a href="../index.html">トップへ戻る</a></h4>
+      <div>
+      <nav>
+        <ul class="footer-nav">
+        <li><a href="../index.html"class="arrow sample1">ホーム</a></li>
+        <li><a href="../contact.html"class="arrow sample1">お問い合わせ</a></li>
+        <li><a href="../policy.html"class="arrow sample1">プライバシーポリシー</a></li>
+        </ul>    
+      </nav>
+      </div>
+        <p><small><a>&copy; 2020 KAZUROG<a></small></p> 
+    </div><!--whole-footer終了!-->
+    </footer>
+  <script>
+  jQuery(window).on("load", function(){
+  jQuery("#loading").hide();
+  });
+  </script>
+</body>
+</html>
