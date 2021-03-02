@@ -1,0 +1,142 @@
+<html>
+<head>   
+<link rel="stylesheet" href="../css/note.css">
+<link rel="shortcut icon" href="../images/icon.jpg" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">        
+<meta charset="utf-8"> 
+<meta name=”viewport” content=”width=device-width”, initial-scale=1”>
+<meta name="description" content="毎日１つ気になったニュースについて自分の見解を述べてます">         
+<script src="../js/jquery-3.4.1.min.js"></script>
+
+<title>忘備録 基本情報アウトプット</title>
+</head>
+<style>
+.left h4{
+    margin-top: 20;
+    font-size: 20;
+}
+.contents p{
+    text-align: left;
+} 
+.theme{
+margin-top: 40;
+}
+.theme h4{
+  border-bottom: solid 2px #2aacd8;
+}
+.edit-time{
+text-align: left;
+padding-left: 10;
+}
+
+</style>
+<body>    
+    <div id="loading">
+     <img src="../images/loading.gif">
+    </div>
+
+    <header class="page-header" >
+      <h1><a href="../index.html">KAZUROG</a></h1>
+      <nav>
+      <ul class="main-nav" >
+      <li><a href="../index.html">ホーム</a></li>
+      <li><a href="../contact.html">お問い合わせ</a></li>
+      <li><a href="../writer.html">ライター</a></li>
+      </ul>
+      </nav>
+    </header>
+     <div class="container">
+      <main>
+       <div class="left">
+          <article>
+
+              <div class="left">
+                <div class="theme">
+                    <h4>[基本情報] n進数周り</h4>
+                    </div>
+                    
+                    <div class="edit-time">
+                    <p>2021/3/01</p>
+                    </div>
+              <div class="contents">
+              <p>
+                  自分のサイトで勉強のアウトプットするとやはり頭に残っている感じがするので、基本情報技術者のテスト勉強の過程も記そうと思う。<br>
+                  **あくまで頭にあるものを思いのままに吐き出しているため、読みにくいことがあるかと思います、後日推敲します。。(￣▽￣)**<br><br>
+                  n進数の考え方(8進数を例にとって)<br>
+                  0から７までの数字を使って数を表現する。７の次は10になる。10進数に慣れていると違和感があるが、桁上がりしたら1桁目は０からスタートすること、２桁目は１ずつ上がっていくことを意識すれば問題ないと思う。<br>
+                  77の次は80ではなく100になるのも案外重要だと思う<br><br>
+                  基数変換<br>
+                  テストにも頻出。<br>
+                  2進数から10進数と10進数から2進数の基数変換をここでは取り上げる<br>
+                  2進数の1010.11は10進数では１*８ + 1*2 + 1*1/2 + 1*1/4で表現できる<br>
+                　3ケタ目であれば基数の２を３乗した数字を、少数第２位であれば基数の２を２乗した数字でその桁を割ると求めることができる。<br>
+                  10進数から２進数<br>
+                  １０進数13.05は２進数で表すと1101.00001100110011<br>
+                  整数部分は13を基数の２で割り続ける。(割られる数が２を下回るまで)。少数部分0.53は基数２で掛け続ける(かけた数字の下１桁が0になるまで)大体無限小数になる。。13.05は愚問でしたすみません。。<br>
+                  <br>
+                  コンピュータにおける足し算以外の四則演算<br>
+                  コンピュータは回路を単純に保ちたい為、足し算以外のやり方を知らない。。引き算では a + (-b)みたいなことをする<br>
+                  例えば２進数で負の数を表現するとしたら２の補数というものがある。例えば1111(10進数でいう15)であれば全ビット反転させて1桁目に１足したものが2の補数となる<br>
+                  1111では0001が補数となる<br><br>
+                  例えば10進数5050があるとして、1ケタあげると50500と元々の数*基数となっている。これは２進数でも同じ<br>
+                  2進数1010(10進数でいう10)を1ケタあげると10100, 16+4で20。つまり下の数*基数となっている<br>
+                  これがいわゆる左シフト。右シフトはこの割り算バージョン<br>
+                <br>
+
+
+             </p>
+              <p>
+                  <br>
+                  拙い文章でしたが最後までお読みいただきありがとうございました。
+              </p>
+            </div>
+           
+
+       
+       
+  </div>　　
+  </main>
+  <aside>
+   <div class="right">
+  
+
+      <h2 class="category"><a>カテゴリー</a></h2>
+      <ul class="genre">
+      <li><a href="../index.html" class="arrow sample1">書評</a></li>
+      <li><a href="../index.html" class="arrow sample1">プログラミング</a></li>
+      <li><a href="../index.html" class="arrow sample1">映画レビュー</a></li>
+      <li><a href="../index.html" class="arrow sample1">商品レビュー</a></li>  
+      </ul>  
+      
+    <div class="prof">
+      <img src="../images/nozi.png" width="200" height="200">
+      <div class="myname"><a>ぴーたい</a></div>
+      <div class="intro"><a>少しでも有益な情報を提供できたら幸いです</a></div>
+     </div>
+          
+  </div>　
+  </aside>　
+  </div>
+           
+    <footer>
+    <div class="whole-footer">
+        <h4 id="scroll-top"><a href="../index.html">トップへ戻る</a></h4>
+      <div>
+      <nav>
+        <ul class="footer-nav">
+        <li><a href="../index.html"class="arrow sample1">ホーム</a></li>
+        <li><a href="../contact.html"class="arrow sample1">お問い合わせ</a></li>
+        <li><a href="../policy.html"class="arrow sample1">プライバシーポリシー</a></li>
+        </ul>    
+      </nav>
+      </div>
+        <p><small><a>&copy; 2020 KAZUROG<a></small></p> 
+    </div><!--whole-footer終了!-->
+    </footer>
+  <script>
+  jQuery(window).on("load", function(){
+  jQuery("#loading").hide();
+  });
+  </script>
+</body>
+</html>
